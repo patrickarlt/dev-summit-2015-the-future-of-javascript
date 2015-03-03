@@ -1,0 +1,1 @@
+babel source.js --modules amd -o compiled.js

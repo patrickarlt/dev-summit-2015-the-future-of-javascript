@@ -1,0 +1,22 @@
+{
+  "name": "esri-leaflet-web-components",
+  "version": "1.0.0",
+  "description": "Demo of Esri Leaflet Web Components with Babel JS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "build": "browserify components.js -t babelify --outfile components-compiled.js --debug"
+  },
+  "dependencies": {
+    "esri-leaflet": "^1.0.0-rc.5",
+    "leaflet": "^0.7.3"
+  },
+  "devDependencies": {
+    "babelify": "^5.0.3",
+    "browserify": "^9.0.3"
+  }
+}
