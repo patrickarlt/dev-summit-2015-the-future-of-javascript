@@ -18,7 +18,7 @@
 		<link rel="stylesheet" href="css/theme/esri.css" id="theme">
 
 		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="lib/css/solarized.css">
 
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
 		<script>
@@ -45,7 +45,7 @@
 				</section>
 
 				<section>
-					<h2>A Breif History of JavaScript</h2>
+					<h2>A Brief History of JavaScript</h2>
 				</section>
 
 				<section>
@@ -74,33 +74,36 @@
 
 				<section>
 					<h2>The Framework Wars</h2>
-					<li>Backbone</li>
-					<li>Angular</li>
-					<li>Ember</li>
-					<li>Knockout</li>
-					<li>React</li>
-					<li>MarionetteJS</li>
-					<li>Thorax</li>
-					<li>Batman</li>
-					<li>Dojo</li>
-					<li>Meteor</li>
-					<li>Aurelia</li>
-					<li>Kendo UI</li>
-					<li>Montage</li>
-					<li>...</li>
+					<p style="margin:0">Backbone</li>
+					<p style="margin:0">Angular</li>
+					<p style="margin:0">Ember</li>
+					<p style="margin:0">Knockout</li>
+					<p style="margin:0">React</li>
+					<p style="margin:0">MarionetteJS</li>
+					<p style="margin:0">Thorax</li>
+					<p style="margin:0">Batman</li>
+					<p style="margin:0">Dojo</li>
+					<p style="margin:0">Meteor</li>
+					<p style="margin:0">Aurelia</li>
+					<p style="margin:0">Kendo UI</li>
+					<p style="margin:0">Montage</li>
+					<p style="margin:0">ExtJS</li>
+					<p style="margin:0">Vue.js</li>
+					<p style="margin:0">Flight</li>
+					<p style="margin:0">Riot.js</li>
+					<p style="margin:0">Mithril</li>
+					<p style="margin:0">...</li>
 				</section>
 
 				<section>
 					<h2>JavaScript Today</h2>
 					<ul>
-						<li>Awesome</li>
-						<li>Fragmented</li>
-						<li>Wild West</li>
+						<li>Awesome. Fragmented. Wild West.</li>
 					</ul>
 				</section>
 
 				<section>
-					<h2>Our Saviors ES 6 and Web Components!</h2>
+					<h2>Our Savior ES 6!</h2>
 				</section>
 
 				<section>
@@ -176,7 +179,7 @@ class Developer extends Person {
 	}
 	code(){
 		if(this.caffine > 1){
-			console.log(`&#@&!^&*#%^*@($%@)!*`);
+			console.log("&#!^&*#%^*($%)!*");
 			this.caffine = this.caffine - 2;
 		} else {
 			console.log('Not enough caffine. Use coffee() or tea()');
@@ -190,7 +193,7 @@ class Developer extends Person {
 var bob = new Developer('bob', 1);
 bob.hello(); // > Hi I'm Bob
 bob.coffee(); //> caffine now 3
-bob.code() //> &#@&!^&*#%^*@($%@)!*
+bob.code() //> &#!^&*#%^*($%)!*
 					 //> caffine now 1
 </code></pre></section>
 
@@ -206,9 +209,9 @@ bob.code() //> &#@&!^&*#%^*@($%@)!*
 				</section>
 
 				<section>
-					<h2>Experiance the Future! Today!</h2>
+					<h2>Experiance the Future!</h2>
 					<p>Babel JS and Traceur compile ES 6 (tomorrows standard) to ES 5 (todays standard).</p>
-					<p>Everything except IE 8 and lower.</p>
+					<p>IE 9+</p>
 				</section>
 
 				<section>
@@ -220,9 +223,24 @@ bob.code() //> &#@&!^&*#%^*@($%@)!*
 				</section>
 
 				<section>
+					<h2>Our Savior Web Components!</h2>
+				</section>
+
+				<section>
 					<h2>Web Componets</h2>
 					<p>A set of (4) new standards for creating custom HTML elements. Lays the ground work for reusable UI Components.</p>
-					<p>JQuery UI, Dijits, Kendo UI, Ember.Component, Angular Directives&hellip;</p>
+						<p style="margin:0">JQuery</p>
+						<p style="margin:0">Dijits</p>
+						<p style="margin:0">Kendo UI</p>
+						<p style="margin:0">Ember.Component</p>
+						<p style="margin:0">Angular Directives</p>
+						<p style="margin:0">ExtJS</p>
+						<p style="margin:0">Sencha Touch</p>
+						<p style="margin:0">Webix UI</p>
+						<p style="margin:0">Widjmo</p>
+						<p style="margin:0">Chocolate Chip UI</p>
+						<p style="margin:0">Material Design</p>
+						<p style="margin:0">&hellip;</p>
 				</section>
 
 				<section>
@@ -237,10 +255,22 @@ document.registerElement('my-element', MyElement);</code></pre>
 				</section>
 
 				<section>
-				<h2>Lots of Potential</h2>
 <pre><code class="html">&lt;esri-map id=&quot;map&quot; lat=&quot;45.528&quot; lng=&quot;-122.680&quot; zoom=&quot;15&quot; basemap=&quot;Streets&quot;&gt;
   &lt;esri-feature-layer id=&quot;parks&quot; url=&quot;http://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Portland_Parks/FeatureServer/0&quot;&gt;&lt;esri-feature-layer&gt;
 &lt;/esri-map&gt;</code></pre>
+				</section>
+
+				<section><pre><code class="html">&lt;esri-infographic id=&quot;age&quot; variables=&quot;AGE.*&quot; type=&quot;AgePyramid&quot;&gt;
+  &lt;p&gt;Click to query age ranges.&lt;/p&gt;
+&lt;/esri-infographic&gt;
+
+&lt;script&gt;
+  var infographic = documnet.getElementById(&quot;age&quot;);
+
+  map.on(click, function (e) {
+    infographic.setLocation(e.mapPoint);
+  });
+&lt;/script&gt;</code></pre>
 				</section>
 
 				<section>
@@ -249,8 +279,8 @@ document.registerElement('my-element', MyElement);</code></pre>
 
 				<section>
 					<h2>Web Components Today</h2>
-					<p>Everything usable today with support in IE 9+ with a polyfill from http://webcomponents.org/</p>
-					<p>Angualr and Ember have commited to support each other component formats via Web Components</p>
+					<p>Everything usable today with support in IE 9+ with a polyfill from <a href="http://webcomponents.org/">http://webcomponents.org/</a></p>
+					<p>Angular Directives and Ember Components will be compatable with each other!</p>
 				</section>
 
 				<section>
@@ -258,20 +288,21 @@ document.registerElement('my-element', MyElement);</code></pre>
 					<ul>
 						<li>New language features coming to JavaScript with ES 6</li>
 						<li>Real reusable UI componetns with Web Components</li>
-						<li>Both work back to IE 9 with compilers and polyfills</li>
+						<li>IE 9+ with compilers and polyfills</li>
 					</ul>
 				</section>
 
 				<section>
 					<h2>Resources</h2>
 					<ul>
-						<li>ES 6: https://babeljs.io/docs/learn-es6/</li>
-						<li>Web Components: http://webcomponents.org/resources</li>
+						<li>ES 6: <a href="https://babeljs.io/docs/learn-es6/">https://babeljs.io/docs/learn-es6/</a></li>
+						<li>Web Components: <a href="http://webcomponents.org/resources">http://webcomponents.org/resources</a></li>
 					</ul>
 				</section>
 
 				<section>
 					<h1>Thanks!</h1>
+					<p><a href="www.esri.com/RateMyDevSummitSession">www.esri.com/RateMyDevSummitSession</a></p>
 					<p>Twitter: <a href="http://twitter.com/patrickarlt">@patrickarlt</a></p>
 					<p>Slides: <a href="http://patrickarlt.github.io/dev-summit-2015-the-future-of-javascript">http://arcg.is/18GQw5E</a></p>
 					<div class="center-text">
@@ -304,8 +335,8 @@ document.registerElement('my-element', MyElement);</code></pre>
 				transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
 
 				// Parallax scrolling
-				parallaxBackgroundImage: 'background.jpg',
-				parallaxBackgroundSize: '2193px 1334px',
+				// parallaxBackgroundImage: 'background.jpg',
+				// parallaxBackgroundSize: '2193px 1334px',
 
 				// Optional libraries used to extend on reveal.js
 				dependencies: [
