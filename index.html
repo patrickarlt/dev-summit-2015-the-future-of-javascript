@@ -95,11 +95,9 @@
 					<p style="margin:0">...</li>
 				</section>
 
-				<section>
+				<section class="center-text">
 					<h2>JavaScript Today</h2>
-					<ul>
-						<li>Awesome. Fragmented. Wild West.</li>
-					</ul>
+					<p>Awesome. Fragmented. Wild West.</p>
 				</section>
 
 				<section>
@@ -113,14 +111,15 @@
 
 				<section>
 					<h2>Key ES 6 Features</h2>
-					<ul>
-						<li>Modules</li>
-						<li>Classes</li>
-						<li>Promises</li>
-						<li>Iterators/Generators</li>
-						<li><code>let</code> and <code>const</code></li>
-						<li><a href="https://babeljs.io/docs/learn-es6/">Loads more</a></li>
-					</ul>
+						<p style="margin:0;">Modules</p>
+						<p style="margin:0;">Classes</p>
+						<p style="margin:0;">Promises</p>
+						<p style="margin:0;">Arrow Functions</p>
+						<p style="margin:0;">Template Strings</p>
+						<p style="margin:0;">Default/Rest/Spread Params</p>
+						<p style="margin:0;"><code>let</code> and <code>const</code></p>
+						<p style="margin:0;">Maps and Sets</p>
+						<p style="margin:0;"><a href="https://babeljs.io/docs/learn-es6/">Loads more&hellip;</a></p>
 				</section>
 
 				<section>
@@ -133,7 +132,7 @@ var renderer = new HeatmapRenderer(...);
 
 layer.setRenderer(renderer);
 
-export renderer renderer;
+export renderer;
 export layer;</code></pre>
 <pre><code class="javascript">//map.js
 import Map from 'esri/map';
@@ -147,31 +146,24 @@ export default map;</code></pre>
 				</section>
 
 <section><pre><code>class Person {
-	constructor(name){
-		this._name = name;
-	}
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
 
-	hello(){
-		console.log(`Hi I'm ${this.name}`);
-	}
+  get name() {
+    return this.firstName + ' ' + this.lastName;
+  }
 
-	get name(){
-		console.log('getting name');
-		return this._name;
-	}
-
-	set name(value) {
-		console.log('setting name, could do validation ect...');
-		this._name = value;
-	}
-}
-
-var thing = new Person("Bob");
-bob.hello();
-// > getting name
-// > Hi I'm Bob</code></pre></section>
+  set name(name) {
+    var parts = name.split(' ');
+    this.firstName = parts[0];
+    this.lastName = parts[1];
+  }
+}</code></pre></section>
 
 <section><pre><code>import Person from './Person';
+
 class Developer extends Person {
 	constructor(name, caffine){
 		super(name);
@@ -186,26 +178,62 @@ class Developer extends Person {
 		}
 	}
 	coffee(){ this.caffine = this.caffine + 2; }
-	tea(){ this.caffine = this.caffine + 1; }
 	set caffine(value){ console.log(`caffine now ${this.caffine}`) }
-}
-
-var bob = new Developer('bob', 1);
-bob.hello(); // > Hi I'm Bob
-bob.coffee(); //> caffine now 3
-bob.code() //> &#!^&*#%^*($%)!*
-					 //> caffine now 1
-</code></pre></section>
+}</code></pre></section>
 
 				<section>
-					<h2>ES 6 Features</h2>
-					<ul>
-						<li>Modules</li>
-						<li>Classes</li>
-						<li>Object shorthand</li>
-						<li>Templates</li>
-						<li><a href="https://babeljs.io/docs/learn-es6/">Loads more</a></li>
-					</ul>
+					<pre><code class="javascript">var MyApp = {
+	items: [],
+	getItems: function(){
+		getPortalItems().then(function(items){
+			this.items = items; // this is actually window :(
+		});
+	}
+}</code></pre>
+				</section>
+
+				<section>
+					<pre><code class="javascript">var MyApp = {
+	items: [],
+	getItems: function(){
+		getPortalItems().then(hitch(this, function(items){
+			this.items = items; // now this now MyApp :)
+		}));
+	}
+}</code></pre>
+				</section>
+
+				<section>
+					<pre><code class="javascript">var MyApp = {
+	items: [],
+	getItems: function(){
+		getPortalItems().then(_.bind(function(items){
+			this.items = items; // now this now MyApp :)
+		}, this));
+	}
+}</code></pre>
+				</section>
+
+				<section>
+					<pre><code class="javascript">var MyApp = {
+	items: [],
+	getItems: function(){
+		getPortalItems().then(function(items){
+			this.items = items;  // now this now MyApp :)
+		}.bind(this));
+	}
+}</code></pre>
+				</section>
+
+				<section>
+					<pre><code class="javascript">var MyApp = {
+	items: [],
+	getItems: function(){
+		getPortalItems().then( (items) => {
+			this.items = items;  // now this now MyApp :)
+		});
+	}
+}</code></pre>
 				</section>
 
 				<section>
