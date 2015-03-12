@@ -272,6 +272,26 @@ class Developer extends Person {
 				</section>
 
 				<section>
+					<h2>The Web Component Specs</h2>
+					<ul>
+						<li>Templates</li>
+						<li>HTML Imports</li>
+						<li>Shadow DOM</li>
+						<li>Custom Elements</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Custom Elements</h2>
+					<ul>
+						<li>Templates are a little boring</li>
+						<li>Firefox isn't supporting HTML Imports</li>
+						<li>Shadow DOM is difficult to polyfill</li>
+						<li>Custom Elements are awesome just on their own</li>
+					</ul>
+				</section>
+
+				<section>
 <pre><code class="javascript">class MyElement extends HTMLElement {
 	createdCallback(){
 		// what do yo do when your element is created?
@@ -299,6 +319,12 @@ document.registerElement('my-element', MyElement);</code></pre>
     infographic.setLocation(e.mapPoint);
   });
 &lt;/script&gt;</code></pre>
+				</section>
+
+				<section>
+					<pre><code class="javascript">&lt;esri-search id=&quot;search&quot; map=&quot;map&quot;&gt;
+  &lt;esri-search-source name=&quot;Congressional Districts&quot; displayField=&quot;DISTRICTID&quot; searchField=&quot;DISTRICTID&quot; url=&quot;http://services.arcgis.com/V6ZHFr6zdgNZuVG0/arcgis/rest/services/CongressionalDistricts/FeatureServer/0&quot;&gt;&lt;esri-search-source&gt;
+&lt;/esri-search&gt;</code></pre>
 				</section>
 
 				<section>
