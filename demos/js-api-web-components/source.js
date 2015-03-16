@@ -63,7 +63,7 @@ class EsriSearch extends HTMLElement {
       enableLabel: false,
       enableInfoWindow: true,
       showInfoWindowOnSelect: false,
-      map: document.getElementById('map').getMap()
+      map: document.getElementById(this.getAttribute('map')).getMap()
     }, "search_internal");
 
     this.search.startup();

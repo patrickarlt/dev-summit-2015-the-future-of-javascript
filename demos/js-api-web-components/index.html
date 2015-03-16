@@ -25,8 +25,13 @@
     </script>
   </head>
   <body>
+
     <esri-map id="map" lat="34.05" lng="-118.24" zoom="10" basemap="gray">
-      <esri-feature-layer id="parks" opacity="0.5" url="http://services.arcgis.com/V6ZHFr6zdgNZuVG0/arcgis/rest/services/CongressionalDistricts/FeatureServer/0"><esri-feature-layer>
+      <esri-feature-layer id="parks" opacity="0.5" url="http://services.arcgis.com/V6ZHFr6zdgNZuVG0/arcgis/rest/services/CongressionalDistricts/FeatureServer/0">
+        <esri-popup>
+          <h2>{{Title}}</h2>
+        </esri-popup>
+      <esri-feature-layer>
     </esri-map>
 
     <esri-search id="search" map="map">
